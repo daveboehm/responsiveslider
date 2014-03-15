@@ -1,0 +1,134 @@
+/* non-essential styling */
+body {background: #444; color: #fff; font-family: Helvetica, sans-serif;}
+.clearfix {clear:both;}
+
+/* viewer styling */
+div.viewer {
+	width:940px; 
+	height:250px; 
+	margin:0 auto; 
+	position:relative; 
+	overflow:hidden;
+}
+div.slide_container {
+	width: 940px; 
+	height:250px;
+	position:absolute;
+	top:0;
+	left:0;
+	margin:0;
+	padding:0;
+}
+div.slide {
+	float:left; 
+	display:inline-block;
+	z-index:10;
+	margin:0;
+	padding:0;
+	width:940px;
+}
+div.slide img {
+	width:50%;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+div.slide .copy {
+	width:40%;
+	float: left;
+	margin: 0;
+	padding: 0 5%;
+}
+
+/*step numbers styling */
+div.steps_container {
+	clear: both;
+	margin: 10px auto;
+	z-index: 50;
+	width:200px;
+	height: 30px;
+	font-size: 12pt !important;
+}
+span.step_nums {
+	margin: 0 10px;
+	height: 20px;
+	float: left;
+	border-radius: 100%;
+	background: #eee;
+	-webkit-transition: all 300ms ease-in-out;
+		-moz-transition: all 300ms ease-in-out;
+        -ms-transition: all 300ms ease-in-out;
+        -o-transition: all 300ms ease-in-out;
+		transition: all 300ms ease-in-out;
+	width: 20px;
+}
+span.active_step {
+	background: #ddd;
+	box-shadow: 0 3px 17px -6px rgba(0, 0, 0, 0.3), inset 0 -4px 10px -2px rgba(255, 255, 255, 0.6), inset 0 8px 20px 0 rgba(0, 0, 0, 0.2), inset 0 0 5px 1px rgba(255, 255, 255, 0.6);
+}
+@media(max-width:959px){
+	div.viewer {
+		width:700px; 
+		height:400px; 
+		margin:0 auto; 
+		position:relative; 
+		overflow:hidden;
+	}
+	div.slide_container {
+		width: 700px; 
+		height:400px;
+		position:absolute;
+		top:0;
+		left:0;
+		margin:0;
+		padding:0;
+	}
+	div.slide {
+		float:left; 
+		display:inline-block;
+		z-index:10;
+		margin:0;
+		padding:0;
+		width:100%;
+		max-width:700px;
+		min-width:300px;
+	}
+}
+
+@media(max-width:767px){
+	div.viewer,
+	div.slide_container,
+	div.slide {
+		position:static;
+		height: auto;
+		width:95%;
+	}
+	div.viewer {
+		margin:0 auto; 
+		overflow: auto;
+	}
+	div.slide_container {
+		margin:0;
+		padding:0;
+	}
+	div.steps_container, div.buttons {
+		display: none;
+	}
+	div.slide {
+		float:none; 
+		display:inline-block;
+		z-index:10;
+		margin:0;
+		padding:0;
+		width: 96%;
+		min-width:280px;
+	}
+	div.slide img,
+	div.slide .copy {
+		width:100%;
+		float: left;
+		margin: 10px 0;
+		padding: 0;
+	}
+}
